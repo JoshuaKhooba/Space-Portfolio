@@ -1,36 +1,167 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚀 Space Portfolio — Joshua Khooba
 
-## Getting Started
+A space-themed personal portfolio built with **Next.js 14**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**. Features an animated starfield background, scroll-driven animations, and a fully responsive layout.
 
-First, run the development server:
+**Live site:** _add your deployed URL here_
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## ✨ Features
+
+- Animated 3D starfield background (Three.js / React Three Fiber)
+- Smooth scroll-triggered entrance animations (Framer Motion)
+- Animated role badge that cycles through your job titles
+- Glow hover effects on all cards and buttons
+- Responsive layout — mobile, tablet, and desktop
+- Sections: Hero · About · Skills · Education · Experience · Encryption showcase · Projects · Contact
+- Resume download button
+- Footer with social links and quick navigation
+
+---
+
+## 🛠 Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 14 (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS |
+| Animations | Framer Motion |
+| 3D / Stars | Three.js + React Three Fiber |
+| Icons | React Icons, Heroicons |
+| Deployment | Vercel (recommended) |
+
+---
+
+## 📁 Project Structure
+
+```
+Space-Portfolio/
+├── app/
+│   ├── page.tsx          # Main page — controls section order
+│   └── layout.tsx        # Root layout (fonts, metadata)
+├── components/
+│   ├── main/             # Full-page sections
+│   │   ├── Hero.tsx
+│   │   ├── About.tsx
+│   │   ├── Skills.tsx
+│   │   ├── Education.tsx
+│   │   ├── Experience.tsx
+│   │   ├── Encryption.tsx
+│   │   ├── Projects.tsx
+│   │   ├── Contact.tsx
+│   │   ├── Navbar.tsx
+│   │   ├── Footer.tsx
+│   │   └── StarBackground.tsx
+│   └── sub/              # Sub-components used inside sections
+│       └── HeroContent.tsx
+├── constants/
+│   └── index.ts          # ← ALL site content lives here
+├── public/               # Images, SVGs, video assets, resume PDF
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Local Development
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Prerequisites:** Node.js 18+ and npm (or yarn/pnpm)
 
-## Learn More
+```bash
+# 1. Clone the repo
+git clone https://github.com/JoshuaKhooba/Space-Portfolio.git
+cd Space-Portfolio
 
-To learn more about Next.js, take a look at the following resources:
+# 2. Install dependencies
+npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# 3. Start the dev server
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ✏️ Updating Your Content
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Almost all site content is managed in one file: **`constants/index.ts`**
+
+### Skills
+Find the arrays `Language_skills`, `Frontend_skill`, `Backend_skill`, `Database_skill`, `Tool_skill`. Add or remove objects:
+```ts
+{ skill_name: "Rust", Image: "/rust.png", width: 55, height: 55 }
+```
+Drop the icon image into `/public/`.
+
+### Social Links
+Find the `Socials` array in `constants/index.ts`. Update the `link` values to your profiles.
+
+### Projects
+Find the projects array in `constants/index.ts` (or in `components/main/Projects.tsx`). Each project has a `title`, `description`, `image`, `link`, and `tags`.
+
+### Experience / Work History
+Edit `components/main/Experience.tsx` directly — each job entry is an object with company, role, date range, and bullet points.
+
+### Education
+Edit `components/main/Education.tsx` directly.
+
+### About Me
+Edit the bio text in `components/main/About.tsx`.
+
+### Hero Section
+Edit `components/sub/HeroContent.tsx`:
+- **Name / title** — update the JSX at the top
+- **Animated roles** — update the `ROLES` array
+- **Stats chips** — update the `STATS` array
+- **Description** — update the paragraph text
+
+### Resume
+Replace `/public/Joshua_Khooba_Resume.pdf` with your updated PDF, keeping the same filename. Or update the `href` in `HeroContent.tsx` and `Contact.tsx` to match your new filename.
+
+### Contact Info
+Edit `components/main/Contact.tsx` — update the email address, location, and any other contact details in the "Contact Info" card.
+
+---
+
+## 🌐 Deploying to Vercel
+
+Vercel is the easiest way to host a Next.js site for free.
+
+1. Push your code to GitHub
+2. Go to [vercel.com](https://vercel.com) and sign in with GitHub
+3. Click **"Add New Project"** → select your `Space-Portfolio` repo
+4. Leave all settings as default — Vercel auto-detects Next.js
+5. Click **Deploy**
+
+Your site will be live at `https://your-project.vercel.app` in ~2 minutes.
+
+### Updating after deploy
+```bash
+# Make your changes locally, then:
+git add .
+git commit -m "update content"
+git push
+```
+Vercel automatically redeploys on every push to `main`.
+
+### Custom domain
+In your Vercel project → **Settings → Domains**, add your domain and follow the DNS instructions.
+
+---
+
+## 🔧 Customizing the Theme
+
+The purple/cyan color scheme is defined with Tailwind utility classes. Key values:
+- **Primary purple:** `#7042f8` / `purple-600`
+- **Accent cyan:** `cyan-500`
+- **Card background:** `#0300145e`
+- **Page background:** `#030014`
+
+To change the gradient used on the name, buttons, and logo — search for `from-purple-600 to-cyan-500` across the codebase and update both values.
+
+---
+
+## 📄 License
+
+This project is open source. Feel free to fork and customize it for your own portfolio.
