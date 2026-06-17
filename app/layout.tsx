@@ -8,8 +8,9 @@ import Footer from "@/components/main/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Space Portfolio",
-  description: "This is my portfolio",
+  title: "Joshua Khooba | Full-Stack Developer",
+  description:
+    "Portfolio of Joshua Khooba — Full-Stack Developer specializing in Web, Mobile, and Data Analytics. UCF graduate in Information Technology.",
 };
 
 export default function RootLayout({
