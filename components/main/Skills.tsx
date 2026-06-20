@@ -24,8 +24,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden pb-20 py-20"
-      style={{ transform: "scale(0.9)" }}
+      className="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden py-20 px-4 md:px-10 scroll-mt-20"
     >
       {/* Header */}
       <motion.div
