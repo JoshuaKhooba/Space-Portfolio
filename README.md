@@ -164,4 +164,4 @@ To change the gradient used on the name, buttons, and logo — search for `from-
 
 ## 📄 License
 
-This project is open source. Feel free to fork and customize it for your own portfolio.
+This project has an MIT License.
