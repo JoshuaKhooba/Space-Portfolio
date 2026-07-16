@@ -25,6 +25,31 @@ const GlowCard = ({ children, borderColor }: { children: React.ReactNode; border
 
 const experiences = [
   {
+    id: 0,
+    title: "AI Trainer",
+    company: "LinkedIn",
+    date: "Jul 2026 – Present",
+    location: "Ocala, FL",
+    type: "Contract · Remote",
+    icon: "🤖",
+    color: "from-purple-500 to-cyan-500",
+    borderColor: "border-purple-500/40",
+    glowColor: "shadow-purple-500/20",
+    caption:
+      "Contract role evaluating and annotating AI model outputs to improve response quality, factual accuracy, and reasoning across large-scale AI infrastructure projects.",
+    bullets: [
+      "Trained AI models by evaluating and annotating complex datasets, improving response quality, factual accuracy, and reasoning across large-scale AI infrastructure projects.",
+      "Validated thousands of AI-generated responses using established quality guidelines, ensuring high standards of accuracy, consistency, and safety for production AI systems.",
+      "Collaborated with cross-functional engineering and research teams to refine annotation standards and improve model performance through actionable quality feedback.",
+      "Analyzed edge cases and ambiguous prompts, identifying recurring failure patterns that informed model optimization and evaluation strategies.",
+      "Applied critical thinking and technical judgment to assess AI outputs, maintaining consistent quality across diverse domains and real-world user scenarios.",
+      "Contributed to the continuous improvement of generative AI systems by providing structured evaluations, detailed documentation, and scalable feedback processes.",
+      "Leveraged analytical problem-solving skills to review complex AI interactions, increasing the reliability and usefulness of large language model outputs.",
+      "Maintained strict confidentiality while working with proprietary AI infrastructure, adhering to security, privacy, and responsible AI policies.",
+    ],
+    skills: ["AI Evaluation", "Data Annotation", "LLM Quality Assurance", "Technical Writing", "Responsible AI"],
+  },
+  {
     id: 1,
     title: "IT Technician",
     company: "Asurion uBreakiFix",

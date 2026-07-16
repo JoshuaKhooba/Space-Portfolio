@@ -90,6 +90,20 @@ export const Socials = [
 // ─── WORK EXPERIENCE ─────────────────────────────────────────────────────────
 export const Work_experience = [
   {
+    id: 0,
+    title: "AI Trainer",
+    company: "LinkedIn",
+    date: "Jul 2026 – Present",
+    location: "Ocala, FL",
+    description: [
+      "Trained AI models by evaluating and annotating complex datasets, improving response quality, factual accuracy, and reasoning across large-scale AI infrastructure projects.",
+      "Validated thousands of AI-generated responses using established quality guidelines, ensuring high standards of accuracy, consistency, and safety for production AI systems.",
+      "Collaborated with cross-functional teams to refine annotation standards and improve model performance through actionable quality feedback.",
+    ],
+    icon: "🤖",
+    color: "from-purple-500 to-cyan-500",
+  },
+  {
     id: 1,
     title: "IT Technician",
     company: "Asurion uBreakiFix",
@@ -151,6 +165,15 @@ export const Work_experience = [
 const GH_OG = "https://opengraph.githubassets.com/1/JoshuaKhooba";
 
 export const Projects = [
+  {
+    title: "EcoVest",
+    description:
+      "AI-powered simulated trading platform that analyzes your stock portfolio and proposes clean-energy reallocations. Built with Gemini AI, Supabase, and Next.js for a hackathon spanning Bloomberg FinTech, Clean Energy, and Google Gemini API tracks.",
+    image: `${GH_OG}/EcoVest`,
+    link: "https://eco-vest-nine.vercel.app",
+    tech: ["Next.js", "TypeScript", "Supabase", "Gemini AI", "Tailwind CSS"],
+    icon: "🌱",
+  },
   {
     title: "Disney VIP App",
     description:
