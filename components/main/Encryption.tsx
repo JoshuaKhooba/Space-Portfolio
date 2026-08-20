@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { slideInFromTop, slideInFromLeft, slideInFromRight } from "@/utils/motion";
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
+import { LouieMedals } from "../sub/LouieStory";
 
 const certifications = [
   {
@@ -47,6 +48,8 @@ const Encryption = () => {
       {/* Background video */}
       <div className="absolute inset-0 z-0 opacity-30">
         <video
+            style={{ pointerEvents: "none" }}
+            tabIndex={-1}
           className="w-full h-full object-cover"
           preload="false"
           playsInline
@@ -61,6 +64,21 @@ const Encryption = () => {
       <div className="absolute inset-0 z-[1] bg-[#030014]/60" />
 
       {/* Content */}
+      {/* Story Ch.6 — Galactic Medals (left float) */}
+      <div className="hidden lg:block absolute left-4 xl:left-10 top-1/2 -translate-y-1/2 pointer-events-none" style={{zIndex:3}}>
+        <LouieMedals
+          size="210px"
+          style={{ filter: "drop-shadow(0 0 24px rgba(251,191,36,0.55)) drop-shadow(0 0 10px rgba(124,58,237,0.35))", animation: "medalsFloat 5s ease-in-out infinite" }}
+        />
+        <style>{`@keyframes medalsFloat{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(-12px) rotate(1.5deg)}}`}</style>
+      </div>
+
+      {/* Mobile/tablet — inline centered */}
+      <div className="block lg:hidden flex justify-center mb-6" style={{zIndex:3,position:"relative"}}>
+        <LouieMedals size="clamp(110px,28vw,155px)" style={{ filter: "drop-shadow(0 0 20px rgba(251,191,36,0.55)) drop-shadow(0 0 8px rgba(124,58,237,0.35))", animation: "medalsFloatSm 4.5s ease-in-out infinite" }}/>
+        <style>{`@keyframes medalsFloatSm{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}`}</style>
+      </div>
+
       <div className="relative z-[10] flex flex-col items-center w-full max-w-5xl">
         {/* Header */}
         <motion.div
@@ -76,6 +94,7 @@ const Encryption = () => {
             <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
             <h1 className="Welcome-text text-[13px]">Verified Credentials</h1>
           </motion.div>
+
           <motion.h2
             variants={slideInFromLeft(0.3)}
             className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center"

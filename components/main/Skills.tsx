@@ -11,6 +11,7 @@ import SkillDataProvider from "../sub/SkillDataProvider";
 import { motion } from "framer-motion";
 import { slideInFromTop } from "@/utils/motion";
 import { SparklesIcon } from "@heroicons/react/24/solid";
+import LouieTethered from "../sub/LouieTethered";
 
 const SECTIONS = [
   { label: "💬 Languages",  data: Language_skills },
@@ -78,16 +79,36 @@ const Skills = () => {
         </div>
       ))}
 
+      {/* Louie on spacewalk tether — anchor inside wormhole, Louie extends right */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",              /* left edge = wormhole center */
+          transform: "translateY(-55%)", /* only center vertically */
+          zIndex: 2,
+          pointerEvents: "none",
+          width: "clamp(300px, 42vw, 520px)",
+        }}
+      >
+        <LouieTethered />
+      </div>
+
       {/* Background video */}
       <div className="w-full h-full absolute">
         <div className="w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover">
           <video
+            style={{ pointerEvents: "none" }}
+            tabIndex={-1}
             className="w-full h-auto"
             preload="false"
             playsInline
             loop
             muted
             autoPlay
+            disablePictureInPicture
+            disableRemotePlayback
             src="/cards-video.webm"
           />
         </div>

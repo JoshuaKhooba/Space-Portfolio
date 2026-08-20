@@ -236,7 +236,6 @@ export const Hobbies = [
   { emoji: "🎾", label: "Tennis" },
   { emoji: "🏋️", label: "Gym" },
   { emoji: "🚗", label: "Sports Cars" },
-  { emoji: "🐕", label: "Corgi Owner" },
   { emoji: "🍥", label: "Anime" },
   { emoji: "🐄", label: "Cow Farmer" },
   { emoji: "🃏", label: "TCG" },

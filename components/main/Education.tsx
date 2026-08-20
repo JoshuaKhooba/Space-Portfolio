@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { slideInFromLeft, slideInFromRight, slideInFromTop } from "@/utils/motion";
 import { SparklesIcon } from "@heroicons/react/24/solid";
+import { LouieAcademy } from "../sub/LouieStory";
 
 const education = [
   {
@@ -42,7 +43,7 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="flex flex-col items-center justify-center py-20 scroll-mt-20 px-4 md:px-10"
+      className="flex flex-col items-center justify-center py-20 scroll-mt-20 px-4 md:px-10 relative"
     >
       {/* Header */}
       <motion.div
@@ -71,6 +72,21 @@ const Education = () => {
           Building a strong academic foundation in technology and computer science
         </motion.p>
       </motion.div>
+
+      {/* Story Ch.4 — Louie at Space Academy (left float) */}
+      <div className="hidden lg:block absolute left-4 xl:left-10 top-1/2 -translate-y-1/2 pointer-events-none" style={{zIndex:2}}>
+        <LouieAcademy
+          size="210px"
+          style={{ filter: "drop-shadow(0 0 24px rgba(124,58,237,0.5)) drop-shadow(0 0 10px rgba(167,139,250,0.35))", animation: "acadFloat 5s ease-in-out infinite" }}
+        />
+        <style>{`@keyframes acadFloat{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(-12px) rotate(1.5deg)}}`}</style>
+      </div>
+
+      {/* Mobile/tablet — inline centered */}
+      <div className="block lg:hidden flex justify-center mb-6">
+        <LouieAcademy size="clamp(110px,28vw,155px)" style={{ filter: "drop-shadow(0 0 20px rgba(124,58,237,0.5)) drop-shadow(0 0 8px rgba(167,139,250,0.35))", animation: "acadFloatSm 4.5s ease-in-out infinite" }}/>
+        <style>{`@keyframes acadFloatSm{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}`}</style>
+      </div>
 
       {/* Cards */}
       <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8">
