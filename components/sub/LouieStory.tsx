@@ -93,7 +93,7 @@ function Face({ x=0,y=0,r=26,mood="happy" }:{x?:number;y?:number;r?:number;mood?
 export function LouiePlanet({size="110px",className="",style}:P) {
   return (
     <div className={className} style={{width:size,flexShrink:0,...style}}>
-      <svg viewBox="0 0 180 190" xmlns="http://www.w3.org/2000/svg" style={{width:"100%",height:"auto",overflow:"visible"}}>
+      <svg viewBox="0 0 180 190" xmlns="http://www.w3.org/2000/svg" style={{width:"100%",height:"auto",overflow:"hidden"}}>
         <defs>
           <radialGradient id="pGlobe" cx="40%" cy="35%">
             <stop offset="0%" stopColor="#34d399"/>
@@ -181,7 +181,7 @@ export function LouiePlanet({size="110px",className="",style}:P) {
 export function LouieAcademy({size="110px",className="",style}:P) {
   return (
     <div className={className} style={{width:size,flexShrink:0,...style}}>
-      <svg viewBox="0 0 190 180" xmlns="http://www.w3.org/2000/svg" style={{width:"100%",height:"auto",overflow:"visible"}}>
+      <svg viewBox="0 0 190 180" xmlns="http://www.w3.org/2000/svg" style={{width:"100%",height:"auto",overflow:"hidden"}}>
         <defs>
           <radialGradient id="aHelm" cx="35%" cy="30%">
             <stop offset="0%" stopColor="#a8d8ff" stopOpacity=".22"/>
@@ -266,7 +266,7 @@ export function LouieAcademy({size="110px",className="",style}:P) {
 export function LouieMissionControl({size="120px",className="",style}:P) {
   return (
     <div className={className} style={{width:size,flexShrink:0,...style}}>
-      <svg viewBox="0 0 210 185" xmlns="http://www.w3.org/2000/svg" style={{width:"100%",height:"auto",overflow:"visible"}}>
+      <svg viewBox="0 0 210 185" xmlns="http://www.w3.org/2000/svg" style={{width:"100%",height:"auto",overflow:"hidden"}}>
         <defs>
           <radialGradient id="mcHelm" cx="35%" cy="30%">
             <stop offset="0%" stopColor="#a8d8ff" stopOpacity=".22"/>
@@ -362,7 +362,7 @@ export function LouieMissionControl({size="120px",className="",style}:P) {
 export function LouieMedals({size="110px",className="",style}:P) {
   return (
     <div className={className} style={{width:size,flexShrink:0,...style}}>
-      <svg viewBox="0 0 180 195" xmlns="http://www.w3.org/2000/svg" style={{width:"100%",height:"auto",overflow:"visible"}}>
+      <svg viewBox="0 0 180 195" xmlns="http://www.w3.org/2000/svg" style={{width:"100%",height:"auto",overflow:"hidden"}}>
         <defs>
           <radialGradient id="mHelm" cx="35%" cy="30%">
             <stop offset="0%" stopColor="#a8d8ff" stopOpacity=".22"/>
@@ -453,7 +453,7 @@ export function LouieMedals({size="110px",className="",style}:P) {
 export function LouieInventor({size="110px",className="",style}:P) {
   return (
     <div className={className} style={{width:size,flexShrink:0,...style}}>
-      <svg viewBox="0 0 200 185" xmlns="http://www.w3.org/2000/svg" style={{width:"100%",height:"auto",overflow:"visible"}}>
+      <svg viewBox="0 0 200 185" xmlns="http://www.w3.org/2000/svg" style={{width:"100%",height:"auto",overflow:"hidden"}}>
         <defs>
           <radialGradient id="iHelm" cx="35%" cy="30%">
             <stop offset="0%" stopColor="#a8d8ff" stopOpacity=".22"/>
@@ -551,7 +551,7 @@ export function LouieInventor({size="110px",className="",style}:P) {
 export function LouieSatellite({size="130px",className="",style}:P) {
   return (
     <div className={className} style={{width:size,flexShrink:0,...style}}>
-      <svg viewBox="0 0 220 190" xmlns="http://www.w3.org/2000/svg" style={{width:"100%",height:"auto",overflow:"visible"}}>
+      <svg viewBox="0 0 220 190" xmlns="http://www.w3.org/2000/svg" style={{width:"100%",height:"auto",overflow:"hidden"}}>
         <defs>
           <radialGradient id="sHelm" cx="35%" cy="30%">
             <stop offset="0%" stopColor="#a8d8ff" stopOpacity=".22"/>
