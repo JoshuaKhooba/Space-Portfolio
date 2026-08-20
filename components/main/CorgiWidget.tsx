@@ -424,7 +424,7 @@ export default function CorgiWidget() {
             <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-cyan-500 flex items-center justify-center text-sm">🐾</div>
             <div className="flex-1 min-w-0">
               <p className="text-white text-sm font-semibold leading-none">Louie</p>
-              <p className="text-gray-500 text-[10px] mt-0.5">Joshua's corgi assistant</p>
+              <p className="text-gray-500 text-[10px] mt-0.5">Joshua&apos;s corgi assistant</p>
             </div>
             <button onClick={() => setChatOpen(false)} className="text-gray-500 hover:text-white transition-colors p-1">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
