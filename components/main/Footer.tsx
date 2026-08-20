@@ -1,4 +1,5 @@
 import React from "react";
+import LouieMini from "../sub/LouieMini";
 
 const Footer = () => {
   return (
@@ -109,10 +110,14 @@ const Footer = () => {
 
           {/* Bottom divider + copyright */}
           <div className="w-full h-px bg-gradient-to-r from-transparent via-[#7042f840] to-transparent mb-6" />
-          <div className="flex flex-col md:flex-row items-center justify-between gap-2">
-            <p className="text-gray-600 text-xs">
-              © 2026 Joshua Khooba. All rights reserved.
-            </p>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <div style={{ animation: "footerWag 3s ease-in-out infinite", filter: "drop-shadow(0 0 6px rgba(96,165,250,0.3))" }}>
+                <style>{`@keyframes footerWag{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg)}}`}</style>
+                <LouieMini size="40px" mood="happy" />
+              </div>
+              <p className="text-gray-600 text-xs">© 2026 Joshua Khooba. All rights reserved.</p>
+            </div>
             <p className="text-gray-600 text-xs">
               Built with <span className="text-purple-500">Next.js</span> · <span className="text-cyan-500">TypeScript</span> · <span className="text-purple-500">Tailwind CSS</span>
             </p>

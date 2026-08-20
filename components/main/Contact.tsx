@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { slideInFromLeft, slideInFromRight, slideInFromTop } from "@/utils/motion";
 import { SparklesIcon } from "@heroicons/react/24/solid";
+import { LouieSatellite } from "../sub/LouieStory";
 
 const GlowCard = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => {
   const [hovered, setHovered] = useState(false);
@@ -86,7 +87,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex flex-col items-center justify-center py-20 scroll-mt-20 px-4 md:px-10"
+      className="flex flex-col items-center justify-center py-20 scroll-mt-20 px-4 md:px-10 relative"
     >
       {/* Header */}
       <motion.div
@@ -115,6 +116,21 @@ const Contact = () => {
           Open to new opportunities, collaborations, or just a chat. I&apos;ll get back to you as soon as possible.
         </motion.p>
       </motion.div>
+
+      {/* Story Ch.8 — Satellite Dish (right float) */}
+      <div className="hidden lg:block absolute right-2 xl:right-8 top-1/2 -translate-y-1/2 pointer-events-none" style={{zIndex:2}}>
+        <LouieSatellite
+          size="220px"
+          style={{ filter: "drop-shadow(0 0 24px rgba(167,139,250,0.55)) drop-shadow(0 0 10px rgba(96,165,250,0.35))", animation: "satFloat 5s ease-in-out infinite" }}
+        />
+        <style>{`@keyframes satFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-12px) rotate(1deg)}}`}</style>
+      </div>
+
+      {/* Mobile/tablet — inline centered */}
+      <div className="block lg:hidden flex justify-center mb-6">
+        <LouieSatellite size="clamp(120px,30vw,170px)" style={{ filter: "drop-shadow(0 0 20px rgba(167,139,250,0.55)) drop-shadow(0 0 8px rgba(96,165,250,0.35))", animation: "satFloatSm 4.5s ease-in-out infinite" }}/>
+        <style>{`@keyframes satFloatSm{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}`}</style>
+      </div>
 
       <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-10">
 

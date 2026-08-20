@@ -4,8 +4,8 @@ import "./globals.css";
 import StarsCanvas from "@/components/main/StarBackground";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
-import CorgiWidget from "@/components/main/CorgiWidget";
 import { Analytics } from "@vercel/analytics/next";
+import CorgiWidget from "@/components/main/CorgiWidget";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });

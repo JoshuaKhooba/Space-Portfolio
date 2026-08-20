@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { slideInFromLeft, slideInFromTop } from "@/utils/motion";
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import { Fun_facts, Hobbies } from "@/constants";
+import { LouiePlanet } from "../sub/LouieStory";
 
 const GlowCard = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => {
   const [hovered, setHovered] = useState(false);
@@ -27,7 +28,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="flex flex-col items-center justify-center pt-0 pb-20 px-4 md:px-10 scroll-mt-20"
+      className="flex flex-col items-center justify-center pt-0 pb-20 px-4 md:px-10 scroll-mt-20 relative"
     >
       {/* Header */}
       <motion.div
@@ -43,6 +44,21 @@ const About = () => {
           About Me
         </motion.h2>
       </motion.div>
+
+      {/* Story Ch.3 — Louie lands on a planet (right side float) */}
+      <div className="hidden lg:block absolute right-4 xl:right-10 top-1/2 -translate-y-1/2 pointer-events-none" style={{zIndex:2}}>
+        <LouiePlanet
+          size="210px"
+          style={{ filter: "drop-shadow(0 0 24px rgba(52,211,153,0.5)) drop-shadow(0 0 10px rgba(124,58,237,0.35))", animation: "planetFloat 5s ease-in-out infinite" }}
+        />
+        <style>{`@keyframes planetFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-12px) rotate(1deg)}}`}</style>
+      </div>
+
+      {/* Mobile/tablet — inline centered */}
+      <div className="block lg:hidden flex justify-center mb-6">
+        <LouiePlanet size="clamp(110px,28vw,155px)" style={{ filter: "drop-shadow(0 0 20px rgba(52,211,153,0.5)) drop-shadow(0 0 8px rgba(124,58,237,0.35))", animation: "planetFloatSm 4.5s ease-in-out infinite" }}/>
+        <style>{`@keyframes planetFloatSm{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}`}</style>
+      </div>
 
       <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-10">
         {/* Hobbies */}

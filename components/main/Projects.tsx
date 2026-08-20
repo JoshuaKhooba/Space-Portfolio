@@ -5,12 +5,13 @@ import { slideInFromLeft, slideInFromRight, slideInFromTop } from "@/utils/motio
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import { Projects } from "@/constants";
 import Image from "next/image";
+import { LouieInventor } from "../sub/LouieStory";
 
 const ProjectsSection = () => {
   return (
     <section
       id="projects"
-      className="flex flex-col items-center justify-center py-20 scroll-mt-20 px-4 md:px-10"
+      className="flex flex-col items-center justify-center py-20 scroll-mt-20 px-4 md:px-10 relative"
     >
       {/* Header */}
       <motion.div
@@ -26,6 +27,7 @@ const ProjectsSection = () => {
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
           <h1 className="Welcome-text text-[13px]">Featured on GitHub</h1>
         </motion.div>
+
         <motion.h2
           variants={slideInFromLeft(0.3)}
           className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center"
@@ -39,6 +41,21 @@ const ProjectsSection = () => {
           A collection of projects across web, mobile, and systems development
         </motion.p>
       </motion.div>
+
+      {/* Story Ch.7 — Space Inventor (right float) */}
+      <div className="hidden lg:block absolute right-4 xl:right-8 top-1/3 pointer-events-none" style={{zIndex:2}}>
+        <LouieInventor
+          size="200px"
+          style={{ filter: "drop-shadow(0 0 24px rgba(56,189,248,0.5)) drop-shadow(0 0 10px rgba(124,58,237,0.35))", animation: "inventFloat 5s ease-in-out infinite" }}
+        />
+        <style>{`@keyframes inventFloat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-12px) rotate(2deg)}}`}</style>
+      </div>
+
+      {/* Mobile/tablet — inline centered */}
+      <div className="block lg:hidden flex justify-center mb-6">
+        <LouieInventor size="clamp(110px,28vw,155px)" style={{ filter: "drop-shadow(0 0 20px rgba(56,189,248,0.5)) drop-shadow(0 0 8px rgba(124,58,237,0.35))", animation: "inventFloatSm 4.5s ease-in-out infinite" }}/>
+        <style>{`@keyframes inventFloatSm{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}`}</style>
+      </div>
 
       {/* Project grid */}
       <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

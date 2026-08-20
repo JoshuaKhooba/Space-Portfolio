@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { slideInFromLeft, slideInFromRight, slideInFromTop } from "@/utils/motion";
 import { SparklesIcon } from "@heroicons/react/24/solid";
+import { LouieMissionControl } from "../sub/LouieStory";
 
 const GlowCard = ({ children, borderColor }: { children: React.ReactNode; borderColor: string }) => {
   const [hovered, setHovered] = useState(false);
@@ -38,14 +39,9 @@ const experiences = [
     caption:
       "Contract role evaluating and annotating AI model outputs to improve response quality, factual accuracy, and reasoning across large-scale AI infrastructure projects.",
     bullets: [
-      "Trained AI models by evaluating and annotating complex datasets, improving response quality, factual accuracy, and reasoning across large-scale AI infrastructure projects.",
-      "Validated thousands of AI-generated responses using established quality guidelines, ensuring high standards of accuracy, consistency, and safety for production AI systems.",
-      "Collaborated with cross-functional engineering and research teams to refine annotation standards and improve model performance through actionable quality feedback.",
-      "Analyzed edge cases and ambiguous prompts, identifying recurring failure patterns that informed model optimization and evaluation strategies.",
-      "Applied critical thinking and technical judgment to assess AI outputs, maintaining consistent quality across diverse domains and real-world user scenarios.",
-      "Contributed to the continuous improvement of generative AI systems by providing structured evaluations, detailed documentation, and scalable feedback processes.",
-      "Leveraged analytical problem-solving skills to review complex AI interactions, increasing the reliability and usefulness of large language model outputs.",
-      "Maintained strict confidentiality while working with proprietary AI infrastructure, adhering to security, privacy, and responsible AI policies.",
+      "Trained and evaluated AI models by annotating complex datasets, improving response quality, factual accuracy, and reasoning across large-scale AI infrastructure projects.",
+      "Validated thousands of AI-generated responses using quality guidelines, ensuring accuracy, consistency, and safety while identifying edge cases that informed model optimization.",
+      "Collaborated with cross-functional engineering and research teams to refine annotation standards and improve model performance through actionable feedback and structured evaluations.",
     ],
     skills: ["AI Evaluation", "Data Annotation", "LLM Quality Assurance", "Technical Writing", "Responsible AI"],
   },
@@ -135,7 +131,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="flex flex-col items-center justify-center py-20 scroll-mt-20 px-4 md:px-10"
+      className="flex flex-col items-center justify-center py-20 scroll-mt-20 px-4 md:px-10 relative"
     >
       {/* Header */}
       <motion.div
@@ -163,7 +159,20 @@ const Experience = () => {
         >
           From government data analysis to Disney VIP operations and IT repair
         </motion.p>
-      </motion.div>
+      </motion.div>      {/* Story Ch.5 — Mission Control (right float) */}
+      <div className="hidden lg:block absolute right-4 xl:right-10 top-1/2 -translate-y-1/2 pointer-events-none" style={{zIndex:2}}>
+        <LouieMissionControl
+          size="210px"
+          style={{ filter: "drop-shadow(0 0 24px rgba(103,232,249,0.5)) drop-shadow(0 0 10px rgba(59,130,246,0.35))", animation: "missionFloat 5s ease-in-out infinite" }}
+        />
+        <style>{`@keyframes missionFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-12px) rotate(1deg)}}`}</style>
+      </div>
+
+      {/* Mobile/tablet — inline centered */}
+      <div className="block lg:hidden flex justify-center mb-6">
+        <LouieMissionControl size="clamp(110px,28vw,155px)" style={{ filter: "drop-shadow(0 0 20px rgba(103,232,249,0.5)) drop-shadow(0 0 8px rgba(59,130,246,0.35))", animation: "missionFloatSm 4.5s ease-in-out infinite" }}/>
+        <style>{`@keyframes missionFloatSm{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}`}</style>
+      </div>
 
       {/* Cards */}
       <div className="w-full max-w-4xl flex flex-col gap-8">
