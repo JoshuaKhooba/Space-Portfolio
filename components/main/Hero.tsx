@@ -6,7 +6,7 @@ import LouieRocket from "../sub/LouieRocket";
 
 const Hero = () => {
   return (
-    <div className="relative flex flex-col min-h-screen w-full" id="about-me">
+    <div className="relative flex flex-col min-h-[70vh] sm:min-h-screen w-full" id="about-me">
       <video
             style={{ pointerEvents: "none" }}
             tabIndex={-1}
@@ -41,7 +41,7 @@ const Hero = () => {
       </div>
 
       {/* Push button to bottom of the full-height hero */}
-      <div className="mt-auto pb-2 flex justify-center z-[20]">
+      <div className="mt-8 sm:mt-auto pb-2 flex justify-center z-[20]">
         <a
           href="#about"
           className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9] no-underline"
