@@ -6,7 +6,7 @@ import LouieRocket from "../sub/LouieRocket";
 
 const Hero = () => {
   return (
-    <div className="relative flex flex-col min-h-[70vh] sm:min-h-screen w-full" id="about-me">
+    <div className="relative flex flex-col min-h-screen w-full" id="about-me">
       <video
             style={{ pointerEvents: "none" }}
             tabIndex={-1}
