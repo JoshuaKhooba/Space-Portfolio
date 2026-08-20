@@ -163,7 +163,7 @@ export function LouieDev({ size = "90px", className = "", style }: BaseProps) {
           <rect x="21" y="115" width="68" height="36" rx="3" fill="#020617"/>
           {/* Code lines on screen */}
           <text x="25" y="126" fontFamily="monospace" fontSize="5.5" fill="#22c55e">const louie = () =&gt; &#123;</text>
-          <text x="25" y="133" fontFamily="monospace" fontSize="5.5" fill="#818cf8">{"  return "good boy""}</text>
+          <text x="25" y="133" fontFamily="monospace" fontSize="5.5" fill="#818cf8">  return good_boy</text>
           <text x="25" y="140" fontFamily="monospace" fontSize="5.5" fill="#22c55e">&#125;</text>
           <text x="25" y="147" fontFamily="monospace" fontSize="5.5" fill="#94a3b8">{"// 🐾 woof"}</text>
           <rect className="ld-cursor" x="52" y="143" width="3" height="6" fill="#22c55e"/>
