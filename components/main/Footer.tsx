@@ -24,7 +24,7 @@ const Footer = () => {
                 </span>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">
-                Full-Stack Developer · UCF Graduate · Orlando, FL
+                Software Engineer · UCF Graduate · Orlando, FL
               </p>
               {/* Social icons */}
               <div className="flex items-center gap-3 mt-1">

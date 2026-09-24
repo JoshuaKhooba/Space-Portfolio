@@ -10,9 +10,10 @@ interface Props {
     width: number;
     height: number;
     index: number;
+    alt?: string;
 }
 
-const SkillDataProvider = ({ src, width, height, index }: Props) => {
+const SkillDataProvider = ({ src, width, height, index, alt = "skill icon" }: Props) => {
   const { ref, inView } = useInView({ triggerOnce: true })
 
   const imageVariants = {
@@ -31,16 +32,16 @@ const SkillDataProvider = ({ src, width, height, index }: Props) => {
       variants={imageVariants}
       animate={inView ? "visible" : "hidden"}
       custom={index}
-      transition={{ delay: index * 0.3 }}
+      transition={{ delay: Math.min(index * 0.08, 0.6) }}
       className="flex items-center justify-center"
     >
       {/* Mobile size */}
       <span className="block sm:hidden">
-        <Image src={src} width={mobileWidth} height={mobileHeight} alt="skill image" />
+        <Image src={src} width={mobileWidth} height={mobileHeight} alt={alt} />
       </span>
       {/* Desktop size */}
       <span className="hidden sm:block">
-        <Image src={src} width={width} height={height} alt="skill image" />
+        <Image src={src} width={width} height={height} alt={alt} />
       </span>
     </motion.div>
   )

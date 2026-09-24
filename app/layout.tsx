@@ -11,9 +11,9 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Joshua Khooba | Full-Stack Developer",
+  title: "Joshua Khooba | Software Engineer",
   description:
-    "Portfolio of Joshua Khooba — Full-Stack Developer specializing in Web, Mobile, and Data Analytics. UCF graduate in Information Technology.",
+    "Portfolio of Joshua Khooba — Software Engineer building AI-powered tools, full-stack web apps, and native iOS apps. UCF graduate in Information Technology.",
 };
 
 export default function RootLayout({

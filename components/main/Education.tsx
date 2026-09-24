@@ -17,8 +17,8 @@ const education = [
     borderColor: "border-yellow-500/40",
     highlights: [
       "Member of UCF Tennis Team",
-      "Relevant coursework: Data Structures, OS, Networking, Database Systems, Cybersecurity",
-      "Dean's List candidate — Information Technology program",
+      "Relevant coursework: Data Structures & Algorithms, Operating Systems, Enterprise Computing, Database Systems, Networking, Cybersecurity",
+      "Certified in AWS Academy Cloud Security Foundations",
     ],
     badge: "B.S.",
   },

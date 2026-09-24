@@ -32,7 +32,7 @@ const Navbar = () => {
                 Joshua Khooba
               </span>
               <span className="text-[10px] text-gray-500 tracking-widest uppercase">
-                Full-Stack Dev
+                Software Engineer
               </span>
             </div>
           </a>
