@@ -7,14 +7,14 @@ import { SparklesIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 
 const ROLES = [
+  "Software Engineer",
+  "AI Developer",
   "Full-Stack Developer",
   "iOS Developer",
-  "Data Analyst",
-  "IT Engineer",
 ];
 
 const STATS = [
-  { value: "4+",  label: "Roles" },
+  { value: "5",   label: "Roles" },
   { value: "6+",  label: "Projects" },
   { value: "2",   label: "Certs" },
   { value: "UCF", label: "Grad" },
@@ -87,9 +87,9 @@ const HeroContent = () => {
           variants={slideInFromLeft(0.75)}
           className="text-sm text-gray-400 leading-relaxed border-l-2 border-purple-500/50 pl-4 max-w-[480px]"
         >
-          I build full-stack web apps, iOS apps, and data-driven tools.
-          UCF B.S. Information Technology graduate — passionate about clean
-          code and creative solutions. 🏴‍☠️
+          I build AI-powered tools, full-stack web apps, and native iOS apps.
+          UCF B.S. Information Technology graduate and AI Trainer at LinkedIn —
+          passionate about clean, typed code and creative solutions. 🏴‍☠️
         </motion.p>
 
         {/* Mini stats row */}

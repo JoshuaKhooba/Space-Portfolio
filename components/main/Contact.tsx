@@ -186,7 +186,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="text-white font-semibold">My Resume</h4>
-                <p className="text-gray-400 text-sm">Updated June 2026</p>
+                <p className="text-gray-400 text-sm">Updated August 2026</p>
               </div>
             </div>
             <p className="text-gray-300 text-sm">

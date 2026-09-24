@@ -5,6 +5,7 @@ import {
   Frontend_skill,
   Language_skills,
   Tool_skill,
+  AI_skill,
 } from "@/constants";
 import React from "react";
 import SkillDataProvider from "../sub/SkillDataProvider";
@@ -18,6 +19,7 @@ const SECTIONS = [
   { label: "🖥️ Front-End", data: Frontend_skill },
   { label: "⚙️ Back-End",  data: Backend_skill },
   { label: "🗄️ Databases", data: Database_skill },
+  { label: "🤖 AI & Testing", data: AI_skill },
   { label: "🛠️ Tools",     data: Tool_skill },
 ];
 
@@ -39,13 +41,13 @@ const Skills = () => {
           className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9] mb-4"
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
-          <h1 className="Welcome-text text-[13px]">Full-Stack &amp; Mobile Development</h1>
+          <h1 className="Welcome-text text-[13px]">AI, Full-Stack &amp; Mobile Development</h1>
         </motion.div>
         <h2 className="text-[30px] text-white font-medium text-center mb-2">
           Building with modern technologies
         </h2>
         <p className="cursive text-[20px] text-gray-200 text-center">
-          From web to mobile — crafting performant, scalable applications
+          From AI tools to web and mobile — crafting performant, scalable applications
         </p>
       </motion.div>
 
@@ -69,6 +71,7 @@ const Skills = () => {
                   width={skill.width}
                   height={skill.height}
                   index={index}
+                  alt={skill.skill_name}
                 />
                 <span className="text-[10px] text-gray-400 text-center max-w-[60px] leading-tight">
                   {skill.skill_name}

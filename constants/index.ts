@@ -43,7 +43,18 @@ export const Database_skill = [
   { skill_name: "PostgreSQL", Image: "/postger.png",                                  width: 55, height: 55 },
   { skill_name: "MongoDB",    Image: "/mongodb.png",                                  width: 55, height: 55 },
   { skill_name: "Firebase",   Image: "/Firebase.png",                                 width: 55, height: 55 },
+  { skill_name: "Supabase",   Image: `${DV}/supabase/supabase-original.svg`,          width: 55, height: 55 },
   { skill_name: "Oracle",     Image: `${DV}/oracle/oracle-original.svg`,              width: 55, height: 55 },
+];
+
+// ─── AI & TESTING ─────────────────────────────────────────────────────────────
+export const AI_skill = [
+  { skill_name: "Claude API",     Image: "/claude.svg",                                        width: 55, height: 55 },
+  { skill_name: "Gemini API",     Image: "/gemini.svg",                                        width: 55, height: 55 },
+  { skill_name: "RAG & Agents",   Image: "/agents.svg",                                        width: 55, height: 55 },
+  { skill_name: "Jest",           Image: `${DV}/jest/jest-plain.svg`,                          width: 55, height: 55 },
+  { skill_name: "Postman",        Image: `${DV}/postman/postman-original.svg`,                 width: 55, height: 55 },
+  { skill_name: "GitHub Actions", Image: `${DV}/githubactions/githubactions-original.svg`,     width: 55, height: 55 },
 ];
 
 // ─── TOOLS ────────────────────────────────────────────────────────────────────
@@ -164,69 +175,76 @@ export const Work_experience = [
 // ─── PROJECTS ─────────────────────────────────────────────────────────────────
 const GH_OG = "https://opengraph.githubassets.com/1/JoshuaKhooba";
 
-export const Projects = [
+export const Projects: {
+  title: string;
+  category: string;
+  description: string;
+  image: string;
+  repo: string;
+  demo?: string;
+  tech: string[];
+  icon: string;
+}[] = [
+  {
+    title: "JARVIS AI Assistant",
+    category: "AI · Agents",
+    description:
+      "Cross-platform, real-time voice assistant built on the Gemini Live API. Hears, sees, and controls your computer — screen and webcam vision, persistent session memory, proactive briefings, 25+ tool actions, and a phone-paired remote dashboard.",
+    image: `${GH_OG}/JarvisAI`,
+    repo: "https://github.com/JoshuaKhooba/JarvisAI",
+    tech: ["Python", "Gemini Live API", "Speech-to-Text", "TTS", "Agents"],
+    icon: "🤖",
+  },
   {
     title: "EcoVest",
+    category: "AI · FinTech",
     description:
-      "AI-powered simulated trading platform that analyzes your stock portfolio and proposes clean-energy reallocations. Built with Gemini AI, Supabase, and Next.js for a hackathon spanning Bloomberg FinTech, Clean Energy, and Google Gemini API tracks.",
+      "12-hour hackathon build. A paper-trading platform covering 19 equities and ETFs with an explainable reallocation engine that proposes clean-energy portfolio shifts, each with a Gemini-generated rationale.",
     image: `${GH_OG}/EcoVest`,
-    link: "https://eco-vest-nine.vercel.app",
-    tech: ["Next.js", "TypeScript", "Supabase", "Gemini AI", "Tailwind CSS"],
+    repo: "https://github.com/JoshuaKhooba/EcoVest",
+    demo: "https://eco-vest-nine.vercel.app",
+    tech: ["Next.js", "TypeScript", "Gemini API", "Prisma", "NextAuth"],
     icon: "🌱",
   },
   {
     title: "Disney VIP App",
+    category: "iOS · AI",
     description:
-      "SwiftUI-based iOS app using MVVM architecture to manage user authentication, reservations, events, and check-ins across 15+ views and models.",
+      "Production-style SwiftUI client spanning 15+ views for authentication, reservations, events, and guest check-in — MVVM architecture backed by Supabase with real-time sync and Claude API integration.",
     image: `${GH_OG}/Disney-VIP-App`,
-    link: "https://github.com/JoshuaKhooba/Disney-VIP-App",
-    tech: ["Swift", "SwiftUI", "Supabase"],
+    repo: "https://github.com/JoshuaKhooba/Disney-VIP-App",
+    tech: ["Swift", "SwiftUI", "MVVM", "Supabase", "Claude API"],
     icon: "🏰",
   },
   {
     title: "FlowSync",
+    category: "Full-Stack",
     description:
-      "Full-stack project management platform built with React, Prisma, and PostgreSQL. Teams can create, track, and collaborate on tasks in real time.",
+      "Project management platform with a drag-and-drop Kanban board, Gantt timeline, and cross-entity search over a normalized seven-model schema — four task views backed by one cached data layer.",
     image: `${GH_OG}/FlowSync`,
-    link: "https://github.com/JoshuaKhooba/FlowSync",
-    tech: ["TypeScript", "React", "PostgreSQL"],
+    repo: "https://github.com/JoshuaKhooba/FlowSync",
+    tech: ["Next.js", "Express", "Prisma", "PostgreSQL", "AWS Cognito"],
     icon: "🔄",
   },
   {
-    title: "Turtle Coin",
-    description:
-      "Simulated cryptocurrency blockchain demonstrating block creation, hashing, proof-of-work, and transaction validation — a hands-on blockchain security showcase.",
-    image: `${GH_OG}/Turtle-Coin`,
-    link: "https://github.com/JoshuaKhooba/Turtle-Coin",
-    tech: ["Python", "JavaScript", "TypeScript"],
-    icon: "🪙",
-  },
-  {
     title: "Three-Tier Web App",
+    category: "Enterprise",
     description:
-      "Enterprise-grade 3-tier architecture separating presentation, logic, and data layers — demonstrating scalable full-stack design patterns.",
+      "Enterprise three-tier system separating presentation, servlet logic, and MySQL data layers with four permission-scoped roles, injection-safe prepared statements, stored procedures, and a full audit log.",
     image: `${GH_OG}/three-tier-web-app`,
-    link: "https://github.com/JoshuaKhooba/three-tier-web-app",
-    tech: ["Java", "MySQL", "HTML/CSS"],
+    repo: "https://github.com/JoshuaKhooba/three-tier-web-app",
+    tech: ["Java Servlets", "JSP", "Tomcat", "MySQL", "JDBC"],
     icon: "🌐",
   },
   {
     title: "Train Yard Simulator",
+    category: "Systems",
     description:
-      "Multithreaded Java simulation of a train yard using concurrency, thread synchronization, and real-time scheduling to prevent deadlocks.",
+      "Concurrent systems engine modeling 30 trains as independent threads competing for 10 shared switches across 60 route configurations — a bounded thread pool and ordered locking keep it deadlock-free.",
     image: `${GH_OG}/train-yard-multithreaded-simulator`,
-    link: "https://github.com/JoshuaKhooba/train-yard-multithreaded-simulator",
-    tech: ["Java", "Concurrency"],
+    repo: "https://github.com/JoshuaKhooba/train-yard-multithreaded-simulator",
+    tech: ["Java", "Concurrency", "ExecutorService"],
     icon: "🚂",
-  },
-  {
-    title: "Nile.com Shopping Sim",
-    description:
-      "E-commerce simulation built in Java, replicating shopping cart logic, product search, order processing, and client-server communication.",
-    image: `${GH_OG}/nile-dotcom-shopping-sim`,
-    link: "https://github.com/JoshuaKhooba/nile-dotcom-shopping-sim",
-    tech: ["Java", "Networking"],
-    icon: "🛒",
   },
 ];
 
