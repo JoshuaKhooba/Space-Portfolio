@@ -8,7 +8,7 @@ import { LouieAcademy } from "../sub/LouieStory";
 const education = [
   {
     degree: "Bachelor of Science — Information Technology",
-    minor: "Minor: Computer Science",
+    minor: null,
     school: "University of Central Florida",
     location: "Orlando, FL",
     graduated: "May 2026",
@@ -23,7 +23,7 @@ const education = [
     badge: "B.S.",
   },
   {
-    degree: "Associate in Science — Computer Science",
+    degree: "Associate in Arts — Computer Science",
     minor: null,
     school: "College of Central Florida",
     location: "Ocala, FL",
@@ -35,7 +35,7 @@ const education = [
       "Foundation in programming, algorithms, and discrete mathematics",
       "Transferred to UCF with full credit recognition",
     ],
-    badge: "A.S.",
+    badge: "A.A.",
   },
 ];
 

@@ -47,6 +47,26 @@ const experiences = [
   },
   {
     id: 1,
+    title: "Geek Squad Consultant",
+    company: "Best Buy — Geek Squad",
+    date: "Sep 2026 – Present",
+    location: "Ocala, FL",
+    type: "Part-Time",
+    icon: "🖥️",
+    color: "from-blue-500 to-indigo-500",
+    borderColor: "border-blue-500/40",
+    glowColor: "shadow-blue-500/20",
+    caption:
+      "Technical support and device consulting role at Best Buy Geek Squad, providing hands-on troubleshooting and setup assistance for computers, phones, and smart devices across all major platforms.",
+    bullets: [
+      "Troubleshoot, configure, and set up computers, phones, and smart devices across Windows, macOS, iOS, and Android, expanding the store's technical support capacity and reducing customer wait times.",
+      "Rehired after a prior 3.5-year tenure (Jun 2021 – Nov 2024), earning MVP recognition (Jul 2022) for consistently exceeding monthly targets.",
+      "Provide in-depth diagnostics and repair coordination, ensuring high customer satisfaction across a wide range of hardware and software issues.",
+    ],
+    skills: ["Windows", "macOS", "iOS", "Android", "Hardware Diagnostics", "Customer Support", "Device Setup"],
+  },
+  {
+    id: 2,
     title: "IT Technician",
     company: "Asurion uBreakiFix",
     date: "Mar 2026 – Jun 2026",
@@ -66,7 +86,7 @@ const experiences = [
     skills: ["iOS", "Android", "Windows", "Hardware Repair", "Customer Support", "Inventory Management"],
   },
   {
-    id: 2,
+    id: 3,
     title: "VIP Operations Intern",
     company: "The Walt Disney Company",
     date: "Jan 2025 – Jan 2026",
@@ -84,26 +104,6 @@ const experiences = [
       "Coordinated directly with VIP tour guides, transportation teams, and resort departments to resolve real-time scheduling conflicts and deliver seamless guest experiences.",
     ],
     skills: ["Operations", "Data Management", "Scheduling", "Client Relations", "Cross-Team Coordination"],
-  },
-  {
-    id: 3,
-    title: "Corporate Manager",
-    company: "Lotus Consulting Firm",
-    date: "May 2024 – Dec 2024",
-    location: "Orlando, FL",
-    type: "Full-Time",
-    icon: "📊",
-    color: "from-orange-500 to-yellow-500",
-    borderColor: "border-orange-500/40",
-    glowColor: "shadow-orange-500/20",
-    caption:
-      "Managed B2B sales and operational strategy for a consulting firm specializing in T-Mobile business internet and telecommunications solutions. Led both people and process improvements across departments.",
-    bullets: [
-      "Led comprehensive training sessions for 20+ new hires, improving onboarding efficiency and enhancing team productivity by 25% by ensuring consistent adoption of company processes across departments.",
-      "Facilitated strategic client meetings and presentations for T-Mobile business internet and telecommunication solutions, securing $2 million in projected annual revenue by aligning solutions with client needs.",
-      "Implemented operational process improvements across departments, streamlining workflows and reducing bottlenecks by 30% while accelerating project delivery timelines for multiple high-priority initiatives.",
-    ],
-    skills: ["B2B Sales", "Team Leadership", "Process Improvement", "Client Presentations", "T-Mobile Solutions"],
   },
   {
     id: 4,
