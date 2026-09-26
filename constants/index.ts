@@ -133,17 +133,17 @@ export const Work_experience = [
   },
   {
     id: 3,
-    title: "Corporate Manager",
-    company: "Lotus Consulting Firm",
-    date: "May 2024 – Dec 2024",
-    location: "Orlando, FL",
+    title: "Geek Squad Consultant",
+    company: "Best Buy — Geek Squad",
+    date: "Sep 2026 – Present",
+    location: "Ocala, FL",
     description: [
-      "Led training sessions for 20+ new hires, improving onboarding efficiency and team productivity by 25%.",
-      "Secured $2 million in projected annual revenue by facilitating T-Mobile business internet solutions.",
-      "Reduced operational bottlenecks by 30% through process improvements across departments.",
+      "Troubleshoot, configure, and set up computers, phones, and smart devices across Windows, macOS, iOS, and Android, expanding the store's technical support capacity and reducing customer wait times.",
+      "Rehired after a prior 3.5-year tenure (Jun 2021 – Nov 2024), earning MVP recognition (Jul 2022) for consistently exceeding monthly targets.",
+      "Provide in-depth diagnostics and repair coordination, ensuring high customer satisfaction across hardware and software issues.",
     ],
-    icon: "📊",
-    color: "from-orange-500 to-yellow-500",
+    icon: "🖥️",
+    color: "from-blue-500 to-indigo-500",
   },
   {
     id: 4,
@@ -175,31 +175,13 @@ export const Projects = [
     icon: "🌱",
   },
   {
-    title: "Disney VIP App",
+    title: "Jarvis AI",
     description:
-      "SwiftUI-based iOS app using MVVM architecture to manage user authentication, reservations, events, and check-ins across 15+ views and models.",
-    image: `${GH_OG}/Disney-VIP-App`,
-    link: "https://github.com/JoshuaKhooba/Disney-VIP-App",
-    tech: ["Swift", "SwiftUI", "Supabase"],
-    icon: "🏰",
-  },
-  {
-    title: "FlowSync",
-    description:
-      "Full-stack project management platform built with React, Prisma, and PostgreSQL. Teams can create, track, and collaborate on tasks in real time.",
-    image: `${GH_OG}/FlowSync`,
-    link: "https://github.com/JoshuaKhooba/FlowSync",
-    tech: ["TypeScript", "React", "PostgreSQL"],
-    icon: "🔄",
-  },
-  {
-    title: "Turtle Coin",
-    description:
-      "Simulated cryptocurrency blockchain demonstrating block creation, hashing, proof-of-work, and transaction validation — a hands-on blockchain security showcase.",
-    image: `${GH_OG}/Turtle-Coin`,
-    link: "https://github.com/JoshuaKhooba/Turtle-Coin",
-    tech: ["Python", "JavaScript", "TypeScript"],
-    icon: "🪙",
+      "Real-time voice AI assistant with a live 3D geospatial command center. Powered by the Gemini Live API for native audio streaming, featuring a holographic PyQt6 HUD, persistent memory, 30+ integrated tools, and a voice-controlled 3D globe (God's Eye View) for live aircraft and satellite tracking.",
+    image: `${GH_OG}/JarvisAI`,
+    link: "https://github.com/JoshuaKhooba/JarvisAI",
+    tech: ["Python", "Gemini AI", "PyQt6", "Node.js", "Cesium"],
+    icon: "🤖",
   },
   {
     title: "Three-Tier Web App",
@@ -220,13 +202,22 @@ export const Projects = [
     icon: "🚂",
   },
   {
-    title: "Nile.com Shopping Sim",
+    title: "Disney VIP App",
     description:
-      "E-commerce simulation built in Java, replicating shopping cart logic, product search, order processing, and client-server communication.",
-    image: `${GH_OG}/nile-dotcom-shopping-sim`,
-    link: "https://github.com/JoshuaKhooba/nile-dotcom-shopping-sim",
-    tech: ["Java", "Networking"],
-    icon: "🛒",
+      "SwiftUI-based iOS app using MVVM architecture to manage user authentication, reservations, events, and check-ins across 15+ views and models.",
+    image: `${GH_OG}/Disney-VIP-App`,
+    link: "https://github.com/JoshuaKhooba/Disney-VIP-App",
+    tech: ["Swift", "SwiftUI", "Supabase"],
+    icon: "🏰",
+  },
+  {
+    title: "Turtle Coin",
+    description:
+      "Simulated cryptocurrency blockchain demonstrating block creation, hashing, proof-of-work, and transaction validation — a hands-on blockchain security showcase.",
+    image: `${GH_OG}/Turtle-Coin`,
+    link: "https://github.com/JoshuaKhooba/Turtle-Coin",
+    tech: ["Python", "JavaScript", "TypeScript"],
+    icon: "🪙",
   },
 ];
 
