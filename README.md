@@ -2,7 +2,7 @@
 
 A space-themed personal portfolio built with **Next.js 14**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**. Features an animated starfield background, scroll-driven animations, and a fully responsive layout.
 
-**Live site:** _add your deployed URL here_
+**Live site:** https://joshuakhooba.com
 
 ---
 
